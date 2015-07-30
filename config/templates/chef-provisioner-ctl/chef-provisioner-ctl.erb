@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Copyright:: Copyright (c) 2014 CHEF Software, Inc.
+#
+
+# Ensure the calling environment (disapproval look Bundler) does not infect our
+# Ruby environment if called from a Ruby script.
+for ruby_env_var in RUBYOPT \
+                    BUNDLE_BIN_PATH \
+                    BUNDLE_GEMFILE \
+                    GEM_PATH \
+                    GEM_ROOT \
+                    GEM_HOME
+do
+  unset $ruby_env_var
+done
+
+<%= embedded_bin %>/omnibus-addon-ctl chef-provisioner <%= embedded_service %>/omnibus-ctl $@

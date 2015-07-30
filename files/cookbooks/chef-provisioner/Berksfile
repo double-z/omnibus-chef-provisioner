@@ -1,0 +1,8 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'enterprise',
+         git: 'https://github.com/opscode-cookbooks/enterprise-chef-common.git',
+         tag: '0.5.2'
+cookbook 'chef_server',
+         git: 'https://github.com/stephenlauck/chef_server.git'

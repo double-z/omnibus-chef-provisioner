@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Perform necessary chef-provisioner setup steps
+# before package is installed.
+#
+
+echo "You're about to install chef-provisioner!"

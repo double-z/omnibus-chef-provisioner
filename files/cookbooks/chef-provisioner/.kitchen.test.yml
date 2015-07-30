@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ['private_network', { ip: '192.168.33.33' }]
+  synced_folders:
+    - ['../../pkg', '/tmp/packages', 'create: true, type: :rsync']
+
+provisioner:
+  name: chef_solo
+  solo_rb:
+    ssl_verify_mode: verify_peer
+
+platforms:
+  - name: ubuntu-10.04
+  - name: centos-5.10
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-provisioner::default]
+    attributes:
+      provisioner:
+        test:
+          deb_package_path: false
+          rpm_package_path: false

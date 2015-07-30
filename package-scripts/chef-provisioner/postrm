@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Perform necessary chef-provisioner removal steps
+# after package is uninstalled.
+#
+
+echo "chef-provisioner has been uninstalled!"
+
+exit 0

@@ -1,0 +1,9 @@
+export PROVISIONER_ROOT=<%= node['provisioner']['var_directory'] %>
+export PATH="/opt/chef-provisioner/bin:/opt/chef-provisioner/embedded/bin:$PATH"
+export POLICY_ROOT_DIR=<%= node['provisioner']['var_directory'] %>/policies
+export CHEF_PLATFORM_KNIFE=<%= node['provisioner']['install_directory'] %>/.chef/knife.rb
+export CHEF_PROVISIONER_CONF_DIR=<%= node['provisioner']['install_directory'] %>/chef_platform
+export PATH=/opt/chef-provisioner/bin:/opt/chef-provisioner/embedded/bin:$PATH
+export CHEF_PLATFORM_ROOT_DIR=<%= node['provisioner']['install_directory'] %>
+export CHEF_PLATFORM_CONF_DIR=<%= node['provisioner']['install_directory'] %>/chef_platform
+export CHEF_PROVISIONER_ROOT_DIR=<%= node['provisioner']['var_directory'] %>
